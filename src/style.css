@@ -72,3 +72,34 @@ body {
   font-size: 20px;
   font-weight: 400;
 }
+
+.containers .movie-details .more-lists .lists {
+  list-style: none;
+}
+
+.containers .movie-details .more-lists .lists .item {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 8px;
+}
+
+.containers .movie-details .more-lists .lists .item .type {
+  color: white;
+  background-color: rgb(14 165 233);
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.containers .movie-details .more-lists .lists .item .language {
+  color: white;
+  background-color: rgb(235, 114, 14);
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.containers .movie-details .more-lists .lists .item .date {
+  color: white;
+  background-color: rgb(100 116 139);
+  border-radius: 5px;
+  padding: 2px;
+}
