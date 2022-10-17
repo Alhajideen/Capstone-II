@@ -54,7 +54,7 @@ body {
 
 .containers .movie-details .movie-banner {
   width: 30%;
-  height: 50vh;
+  height: 40vh;
   margin: auto;
 }
 
@@ -103,3 +103,57 @@ body {
   border-radius: 5px;
   padding: 2px;
 }
+
+.containers .movie-details .comment-lists {
+  width: 60%;
+  margin: auto;
+  align-items: center;
+}
+
+.containers .movie-details .comment-lists .table-head {
+  display: flex;
+  justify-content: center;
+}
+
+.containers .movie-details .comment-lists h2 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.containers .movie-details .comment-lists table {
+  width: 100%;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.containers .movie-details .comment-lists tr {
+  width: 100%;
+  margin: 10px;
+}
+
+.containers .movie-details .comment-lists tr .cmt-date {
+  width: 30%;
+  background-color: rgb(100 116 139);
+  border-radius: 10px;
+}
+
+.containers .movie-details .comment-lists tr .cmt-name {
+  width: 25%;
+}
+
+.containers .movie-details .comment-lists tr .cmt-body {
+  width: 45%;
+}
+
+.containers .movie-details .add-comment {
+  width: 60%;
+  margin: auto;
+}
+
+.containers .movie-details .add-comment .heading {
+  display: flex;
+  justify-content: center;
+}
+
