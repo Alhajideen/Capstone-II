@@ -1,19 +1,11 @@
+const { default: axios } = require('axios');
 import Requests from './Requests.js';
 
-const showPop = (post, comments) => {
-  let list = '';
-  const username = document.querySelector('.username').value;
-  const comment = document.querySelector('.comment').value;
-  const id = post.id;
-  Requests.postComments(id, username, comment);
-  comments.forEach((comment) => {
-    list += ` <tr>
-                    <td class="cmt-date">${comment.creation_date}</td>
-                    <td class="cmt-name">${comment.username}</td>
-                    <td class="cmt-body"><i>${comment.comment}</i></td>
-                  </tr>`;
-  });
-  return `<div class="containers">
+const showPop = async (post) => {
+  let container = document.querySelector('.cmt-container');
+  const lists = await fetchCmt(post.id);
+  container.style.display = 'flex';
+  container.innerHTML = `<div class="containers">
         <div class="movie-details">
           <div class="close-x">
             <i class="fa-solid fa-x"></i>
@@ -45,12 +37,12 @@ const showPop = (post, comments) => {
           </div>
           <div class="comment-lists">
             <div class="table-head">
-              <h2>Comments(${comment.length})</h2>
+              <h2>Comments()</h2>
             </div>
             <table>
               <div class="tbody">
                 <tbody>
-                  ${list}
+                ${lists}
                 </tbody>
               </div>
             </table>
@@ -61,7 +53,9 @@ const showPop = (post, comments) => {
                 <h1>Add your comment</h1>
               </div>
               <div class="input-name">
-                <input class="username" type="text" placeholder="Your name" />
+                <input class="username" type="text" 
+                name="username"
+                placeholder="Your name" />
               </div>
               <div class="input-cmt">
                 <textarea
@@ -73,12 +67,47 @@ const showPop = (post, comments) => {
                 ></textarea>
               </div>
               <div class="submit-btn">
-                <button>Comment</button>
+                <button class='btn'>Comment</button>
               </div>
             </form>
           </div>
         </div>
       </div>`;
+
+  document.querySelector('.btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    const username = document.querySelector('.username');
+    const comment = document.querySelector('.comment');
+    const id = post.id;
+    Requests.postComment(id, username.value, comment.value);
+  });
+  document.querySelector('.close-x').addEventListener('click', (e) => {
+    e.preventDefault();
+    container.style.display = 'none';
+  });
+};
+
+const fetchCmt = async (id) => {
+  let list = '';
+  try {
+    const comments = await axios(
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments?item_id=${id}`
+    );
+    const response = await comments.data;
+    response.forEach((comment) => {
+      list += ` <tr>
+                    <td class="cmt-date">${comment.creation_date}</td>
+                    <td class="cmt-name">${comment.username}</td>
+                    <td class="cmt-body"><i>${comment.comment}</i></td>
+                  </tr>`;
+    });
+  } catch (err) {
+    const nodata = 'No comment yet,😄 Be the first';
+    list += ` <tr>
+                    <td class="cmt-body" colspan="3"><i>${nodata}</i></td>
+                  </tr>`;
+  }
+  return list;
 };
 
 export default showPop;

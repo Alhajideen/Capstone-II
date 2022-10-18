@@ -2,26 +2,25 @@ const { default: axios } = require('axios');
 import showPop from './commentpop';
 
 export default class Requests {
-  async postComment(id, name, comment) {
-    const res = await axios.post(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments',
-      {
-        item_id: id,
-        username: name,
-        comment: comment,
-      }
-    );
-  }
-  async getComment(id) {
+  static async postComment(id, name, comment) {
     try {
-      const commentPop = document.querySelector('cmt-container');
-      const comments = await axios(
-        `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments?item_id=${id}`
+      const res = await axios.post(
+        'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments',
+        {
+          item_id: id,
+          username: name,
+          comment: comment,
+        }
       );
+      Requests.getComment(id);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  static async getComment(id) {
+    try {
       const post = await axios(`https://api.tvmaze.com/shows/${id}`);
-      console.log(comments);
-      console.log(post);
-      commentPop.innerHTML = showPop(post, comments);
+      showPop(post.data);
     } catch (err) {
       console.log(err);
     }

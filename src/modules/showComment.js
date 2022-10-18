@@ -1,5 +1,6 @@
+import Requests from './Requests';
 const showComment = (id) => {
-  console.log(id);
+  Requests.getComment(id);
 };
 
 export default showComment;
