@@ -5,10 +5,21 @@ import './desktop.css';
 import './style.css';
 
 const showContainer = document.getElementById('showList');
-const result = getShows();
-result.then((value) => {
-  const showLib = new ShowLibrary(value.data);
-  showLib.displayShows(10, showContainer);
+const numberOfShows = document.getElementById('numberOfShows');
+
+let numberOfItems = 0;
+let showArray = [];
+const showsResult = getShows();
+showsResult.then((value) => {
+  showArray = value.data;
+  displayItems(numberOfItems, numberOfItems + 12, showContainer, showArray);
+  numberOfItems += 12;
+  numberOfShows.innerHTML = `(${value.data.length})`;
+  loadSelfLikes();
+}).catch((err) => {
+  console.log(err);
+});
+
 });
 // .catch((err) => {
 //   console.log(err);
