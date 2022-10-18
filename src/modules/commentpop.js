@@ -1,5 +1,11 @@
+import Requests from './Requests.js';
+
 const showPop = (post, comments) => {
   let list = '';
+  const username = document.querySelector('.username').value;
+  const comment = document.querySelector('.comment').value;
+  const id = post.id;
+  Requests.postComments(id, username, comment);
   comments.forEach((comment) => {
     list += ` <tr>
                     <td class="cmt-date">${comment.creation_date}</td>
@@ -39,7 +45,7 @@ const showPop = (post, comments) => {
           </div>
           <div class="comment-lists">
             <div class="table-head">
-              <h2>Comments(5)</h2>
+              <h2>Comments(${comment.length})</h2>
             </div>
             <table>
               <div class="tbody">
@@ -55,11 +61,12 @@ const showPop = (post, comments) => {
                 <h1>Add your comment</h1>
               </div>
               <div class="input-name">
-                <input type="text" placeholder="Your name" />
+                <input class="username" type="text" placeholder="Your name" />
               </div>
               <div class="input-cmt">
                 <textarea
                   name="comment"
+                  class="comment"
                   cols="30"
                   rows="10"
                   placeholder="Your comment about the movie"

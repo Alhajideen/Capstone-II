@@ -1,7 +1,7 @@
 const { default: axios } = require('axios');
 import showPop from './commentpop';
 
-class Requests {
+export default class Requests {
   async postComment(id, name, comment) {
     const res = await axios.post(
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments',
@@ -11,7 +11,6 @@ class Requests {
         comment: comment,
       }
     );
-    console.log(res);
   }
   async getComment(id) {
     try {
