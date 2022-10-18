@@ -26,8 +26,10 @@ body {
 .containers {
   width: 60%;
   margin: auto;
+  padding: 20px 0;
   background-color: white;
-  height: 90vh;
+  border-radius: 5px;
+  height: 95vh;
   overflow: scroll;
 }
 
@@ -148,7 +150,7 @@ body {
 }
 
 .containers .movie-details .add-comment {
-  width: 60%;
+  width: 70%;
   margin: auto;
 }
 
@@ -157,3 +159,40 @@ body {
   justify-content: center;
 }
 
+.containers .movie-details .add-comment .input-name {
+  width: 90%;
+  margin: 5px auto;
+}
+
+.containers .movie-details .add-comment .input-name input {
+  width: 100%;
+  height: 4vh;
+  outline: solid rgb(0, 153, 255);
+  border-radius: 5px;
+}
+
+.containers .movie-details .add-comment .input-cmt {
+  margin: 10px auto;
+  width: 90%;
+}
+
+.containers .movie-details .add-comment .input-cmt textarea {
+  width: 100%;
+  outline: solid rgb(0, 153, 255);
+  border-radius: 5px;
+}
+
+.containers .movie-details .add-comment .submit-btn {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.containers .movie-details .add-comment .submit-btn button {
+  background-color: #c21010;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
