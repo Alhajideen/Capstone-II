@@ -1,62 +1,63 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
-
-> Description the project.
-
+# Leaderboard
+> This web app was built as capstone project for the Javascript module. On the app, there is a list of movies coming dynamically from an external API, you can like a post and you can also comment and the likes and comments are also registered in another external API.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JavaScript (ES6)
+- Linters
+- Webpack
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+## Live Demo
+[Not available yet]()
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+1. Clone the project using `git clone` or just copy the command below:
+  ```
+   git clone https://github.com/Alhajideen/Capstone-II.git
+   ```
+2. Open the project with `Visual Studio Code`
+3. Run `npm install` to get the dependencies
+
+   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
+4. Run the webpack server using this command:
+  ```
+   npm start
+   ```
+  *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
 
 ### Prerequisites
+- Having VsCode installed and configured.
+- Having Git installed and configured.
 
 ### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Clone the repository.
+- Open the project folder in VS Code.
 
 ## Authors
 
-👤 **Author1**
+**Deen**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Alhajideen](https://github.com/Alhajideen)
+- Twitter: [@twitterhandle](https://twitter.com/Alhaji_deen1)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/nurudeen-salifu-776753244)
 
-👤 **Author2**
+**Mohi**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@MahdiAghaali](https://github.com/MahdiAghaali)
+- Twitter: [@twitterhandle](https://twitter.com/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mahdi-aghaali/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Alhajideen/Capstone-II/issues).
 
 ## Show your support
 
@@ -72,6 +73,6 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+## Design Inspiration
 
-Link: https://api.tvmaze.com/shows
+- [Makoji David & Michael Duke](https://github.com/michael-duke/Capstone-II)
