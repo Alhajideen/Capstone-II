@@ -1,8 +1,9 @@
-const { default: axios } = require('axios');
 import Requests from './Requests.js';
 
+const { default: axios } = require('axios');
+
 const showPop = async (post) => {
-  let container = document.querySelector('.cmt-container');
+  const container = document.querySelector('.cmt-container');
   const lists = await fetchCmt(post.id);
   container.style.display = 'flex';
   container.innerHTML = `<div class="containers">
@@ -78,7 +79,7 @@ const showPop = async (post) => {
     e.preventDefault();
     const username = document.querySelector('.username');
     const comment = document.querySelector('.comment');
-    const id = post.id;
+    const { id } = post;
     Requests.postComment(id, username.value, comment.value);
   });
   document.querySelector('.close-x').addEventListener('click', (e) => {
@@ -91,7 +92,7 @@ const fetchCmt = async (id) => {
   let list = '';
   try {
     const comments = await axios(
-      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments?item_id=${id}`
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments?item_id=${id}`,
     );
     const response = await comments.data;
     response.forEach((comment) => {

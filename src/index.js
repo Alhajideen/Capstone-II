@@ -19,7 +19,7 @@ showsResult.then((value) => {
   numberOfShows.innerHTML = `(${value.data.length})`;
   loadSelfLikes();
 }).catch((err) => {
-  console.log(err);
+  console.erro(err);
 });
 
 const loadMoreBtn = document.getElementById('loadMore');

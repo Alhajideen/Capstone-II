@@ -1,5 +1,6 @@
-const { default: axios } = require('axios');
 import showPop from './commentpop';
+
+const { default: axios } = require('axios');
 
 export default class Requests {
   static async postComment(id, name, comment) {
@@ -9,14 +10,15 @@ export default class Requests {
         {
           item_id: id,
           username: name,
-          comment: comment,
-        }
+          comment,
+        },
       );
       Requests.getComment(id);
     } catch (err) {
       console.log(err);
     }
   }
+
   static async getComment(id) {
     try {
       const post = await axios(`https://api.tvmaze.com/shows/${id}`);
