@@ -1,6 +1,12 @@
 @media screen and (min-width: 768px) {
   #showList {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .show {
+    border-radius: 10px;
   }
 }
