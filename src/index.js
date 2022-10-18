@@ -1,6 +1,8 @@
 import getShows from './modules/getShows.js';
-// import getLikes from './modules/getLikes.js';
-import ShowLibrary from './modules/ShowLibrary.js';
+import displayItems from './modules/displayItems.js';
+import getLikes from './modules/getLikes.js';
+import loadSelfLikes from './modules/loadSelfLikes.js';
+import setLikeCount from './modules/setLikeCount.js';
 import './desktop.css';
 import './style.css';
 
@@ -33,7 +35,7 @@ likesResult.then((value) => {
   likesArray = value.data;
   likesArray.forEach((item) => {
     setLikeCount(item.item_id, item.likes);
-});
+  });
 }).catch((err) => {
   console.log(err);
 });
