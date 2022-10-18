@@ -19,7 +19,10 @@ class Requests {
       const comments = await axios(
         `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments?item_id=${id}`
       );
-  
+      const post = await axios(`https://api.tvmaze.com/shows/${id}`);
+      console.log(comments);
+      console.log(post);
+      commentPop.innerHTML = showPop(post, comments);
     } catch (err) {
       console.log(err);
     }
