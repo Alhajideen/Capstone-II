@@ -20,6 +20,13 @@ showsResult.then((value) => {
   console.log(err);
 });
 
+const loadMoreBtn = document.getElementById('loadMore');
+const loadMore = () => {
+  displayItems(numberOfItems, numberOfItems + 8, showContainer, showArray);
+  numberOfItems += 8;
+};
+loadMoreBtn.addEventListener('click', loadMore);
+
 });
 // .catch((err) => {
 //   console.log(err);
