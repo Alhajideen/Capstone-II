@@ -27,7 +27,13 @@ const loadMore = () => {
 };
 loadMoreBtn.addEventListener('click', loadMore);
 
+let likesArray = [];
+const likesResult = getLikes();
+likesResult.then((value) => {
+  likesArray = value.data;
+  likesArray.forEach((item) => {
+    setLikeCount(item.item_id, item.likes);
 });
-// .catch((err) => {
-//   console.log(err);
-// });
+}).catch((err) => {
+  console.log(err);
+});
