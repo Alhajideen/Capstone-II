@@ -7,7 +7,6 @@ const showPop = async (post) => {
   const container = document.querySelector('.cmt-container');
   const lists = await fetchCmt(post.id);
   let cmts = cmtCount(countComment);
-  console.log(cmts);
   container.style.display = 'flex';
   container.innerHTML = `<div class="containers">
         <div class="movie-details">
@@ -41,7 +40,7 @@ const showPop = async (post) => {
           </div>
           <div class="comment-lists">
             <div class="table-head">
-              <h2>Comments(${countComment.length})</h2>
+              <h2>Comments(${cmts})</h2>
             </div>
             <table>
               <div class="tbody">
