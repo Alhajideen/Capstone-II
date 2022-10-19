@@ -13,6 +13,7 @@ const numberOfShows = document.getElementById('numberOfShows');
 let numberOfItems = 0;
 let showArray = [];
 const showsResult = getShows();
+<<<<<<< HEAD
 showsResult
   .then((value) => {
     showArray = value.data;
@@ -27,6 +28,15 @@ showsResult
     console.erro(err);
   });
 
+=======
+showsResult.then((value) => {
+  showArray = value.data;
+  displayItems(numberOfItems, numberOfItems + 12, showContainer, showArray);
+  numberOfItems += 12;
+  numberOfShows.innerHTML = `(${value.data.length})`;
+  loadSelfLikes();
+});
+>>>>>>> abe532e872293a289782201af4db3661aeae2b1c
 const loadMoreBtn = document.getElementById('loadMore');
 const loadMore = () => {
   displayItems(numberOfItems, numberOfItems + 8, showContainer, showArray);
@@ -46,5 +56,9 @@ likesResult
   .catch((err) => {
     console.log(err);
   });
+<<<<<<< HEAD
 
 export default itemCount;
+=======
+});
+>>>>>>> abe532e872293a289782201af4db3661aeae2b1c
