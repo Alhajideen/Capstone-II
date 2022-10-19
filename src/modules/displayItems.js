@@ -1,6 +1,6 @@
-import showComment from './showComment.js';
 import postLike from './postLike.js';
 import likeElement from './likeElement.js';
+import Requests from './Requests';
 /**
  * Creates specified amount of items and appends them to the specified Container
  * @param {number} numberOfItems
@@ -36,7 +36,7 @@ const displayShows = (from, to, showContainer, Array) => {
     showContainer.insertAdjacentHTML('beforeend', htmlString);
     const commentBtn = document.querySelector(`.comment[id="${show.id}"]`);
     commentBtn.addEventListener('click', () => {
-      showComment(show.id);
+        Requests.getComment(show.id);
     });
 
     const likeBtn = document.querySelector(`.like[id="${show.id}"]`);
