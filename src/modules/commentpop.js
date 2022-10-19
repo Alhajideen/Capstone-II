@@ -1,10 +1,13 @@
 import Requests from './Requests.js';
+let countComment = [];
 
 const { default: axios } = require('axios');
 
 const showPop = async (post) => {
   const container = document.querySelector('.cmt-container');
   const lists = await fetchCmt(post.id);
+  let cmts = cmtCount(countComment);
+  console.log(cmts);
   container.style.display = 'flex';
   container.innerHTML = `<div class="containers">
         <div class="movie-details">
@@ -38,7 +41,7 @@ const showPop = async (post) => {
           </div>
           <div class="comment-lists">
             <div class="table-head">
-              <h2>Comments()</h2>
+              <h2>Comments(${countComment.length})</h2>
             </div>
             <table>
               <div class="tbody">
@@ -89,13 +92,15 @@ const showPop = async (post) => {
 };
 
 const fetchCmt = async (id) => {
+  countComment = [];
   let list = '';
   try {
     const comments = await axios(
-      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments?item_id=${id}`,
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eNEDOqZq19cgTLm1Vfps/comments?item_id=${id}`
     );
     const response = await comments.data;
     response.forEach((comment) => {
+      countComment.push(comment);
       list += ` <tr>
                     <td class="cmt-date">${comment.creation_date}</td>
                     <td class="cmt-name">${comment.username}</td>
@@ -109,6 +114,14 @@ const fetchCmt = async (id) => {
                   </tr>`;
   }
   return list;
+};
+
+const cmtCount = (arr) => {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    count++;
+  }
+  return count;
 };
 
 export default showPop;
