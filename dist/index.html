@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Great Movies</title>
+  <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-<script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
-
-<body>
-  <header>
-    <nav>
-      <img src="" alt="Logo" id="logo">
-      <ul>
-        <li>
-          <a href="#shows">
-            <span>TV shows</span>
-            <span id="numberOfShows"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#contacts">
-            Contacts
-          </a>
-        </li>
-        <li>
-          <a href="#about">
-            About us
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <section id="shows">
-  </section>
-  <section id="contacts">
-  </section>
-  <section id="about">
-  </section>
-  <footer>
-    Created by microverse under CC licence
-  </footer>
-</body>
-
+  <body>
+    <section class="cmt-container"></section>
+    <header>
+      <nav>
+        <img
+          src="https://www.freeiconspng.com/uploads/movie-icon-27.png"
+          alt="Logo"
+          id="logo"
+        />
+        <ul id="menu">
+          <li class="selected">
+            <a href="#shows">
+              <span>TV shows </span>
+              <span id="numberOfShows"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#contacts"> Contacts </a>
+          </li>
+          <li>
+            <a href="#about"> About us </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="intro">
+      <h1>Welcome to MovieIndex</h1>
+      <div>placeholder</div>
+    </section>
+    <section id="shows">
+      <ul id="showList"></ul>
+      <button type="button" id="loadMore">
+        <span>Load More</span>
+        <i class="fa-solid fa-caret-down"></i>
+      </button>
+    </section>
+    <section id="contacts"></section>
+    <section id="about"></section>
+    <footer>Created by microverse under CC licence</footer>
+    <script
+      src="https://kit.fontawesome.com/bee9655978.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
