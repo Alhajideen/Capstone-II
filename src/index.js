@@ -23,9 +23,6 @@ showsResult
 
     loadSelfLikes();
   })
-  .catch((err) => {
-    console.erro(err);
-  });
 
 showsResult.then((value) => {
   showArray = value.data;
@@ -50,6 +47,3 @@ likesResult
       setLikeCount(item.item_id, item.likes);
     });
   })
-  .catch((err) => {
-    console.log(err);
-  });

@@ -1,8 +1,8 @@
-import { cmtCount } from '../modules/commentpop';
+import { cmtCount } from '../modules/commentpop.js';
 
 describe('Total comments on a post', () => {
   test('Count four comments', () => {
-    //Assign
+    // Assign
     const commentArr = [
       {
         username: 'John',
@@ -29,24 +29,24 @@ describe('Total comments on a post', () => {
     // Act
     const totalComments = cmtCount(commentArr);
 
-    //Assert
+    // Assert
     expect(totalComments).toBe(4);
   });
 
   test('Count one comment', () => {
-    //Assign
+    // Assign
     const commentArr = [
       {
         username: 'John',
         creation_date: '2022-19-10',
         comment: 'Great movie',
-      }
+      },
     ];
 
     // Act
     const totalComments = cmtCount(commentArr);
 
-    //Assert
+    // Assert
     expect(totalComments).toBe(1);
   });
 });
