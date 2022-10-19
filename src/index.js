@@ -18,10 +18,7 @@ showsResult.then((value) => {
   numberOfItems += 12;
   numberOfShows.innerHTML = `(${value.data.length})`;
   loadSelfLikes();
-}).catch((err) => {
-  console.erro(err);
 });
-
 const loadMoreBtn = document.getElementById('loadMore');
 const loadMore = () => {
   displayItems(numberOfItems, numberOfItems + 8, showContainer, showArray);
@@ -36,6 +33,4 @@ likesResult.then((value) => {
   likesArray.forEach((item) => {
     setLikeCount(item.item_id, item.likes);
   });
-}).catch((err) => {
-  console.log(err);
 });
