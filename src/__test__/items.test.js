@@ -15,7 +15,6 @@ describe('Test item counts', () => {
     ];
 
     const counter = itemCount(itemsArr);
-
     expect(counter).toBe(3);
   });
 });
