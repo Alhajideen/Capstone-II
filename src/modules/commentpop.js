@@ -121,4 +121,4 @@ const cmtCount = (arr) => {
   return count;
 };
 
-export default showPop;
+export { showPop, cmtCount };
