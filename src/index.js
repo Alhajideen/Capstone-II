@@ -22,7 +22,7 @@ showsResult
     numberOfShows.innerHTML = `(${totalItems})`;
 
     loadSelfLikes();
-  })
+  });
 
 showsResult.then((value) => {
   showArray = value.data;
@@ -46,4 +46,4 @@ likesResult
     likesArray.forEach((item) => {
       setLikeCount(item.item_id, item.likes);
     });
-  })
+  });

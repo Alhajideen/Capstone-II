@@ -12,7 +12,10 @@
 - Webpack
 
 ## Live Demo
-[Not available yet]()
+[Deployment](https://movieindex.netlify.app/)
+
+## Presentation video
+[Here is a live demonstration](https://drive.google.com/file/d/1qfz6TueBbAvLC-aeQLxsdJXTdjXFIiAl/view?usp=sharing)
 
 
 ## Getting Started

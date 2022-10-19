@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666193930507" clover="3.2.0">
-  <project timestamp="1666193930508" name="All files">
+<coverage generated="1666196839442" clover="3.2.0">
+  <project timestamp="1666196839443" name="All files">
     <metrics statements="45" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="2" elements="54" coveredelements="14" complexity="0" loc="45" ncloc="45" packages="1" files="3" classes="3"/>
     <file name="Requests.js" path="C:\Users\USER\Desktop\MICROVERSE\Module 2\week 5\Capstone-II\src\modules\Requests.js">
       <metrics statements="9" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
