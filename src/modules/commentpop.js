@@ -43,11 +43,9 @@ const showPop = async (post) => {
               <h2>Comments(${cmts})</h2>
             </div>
             <table>
-              <div class="tbody">
-                <tbody>
+                <tbody class="tbody">
                 ${lists}
                 </tbody>
-              </div>
             </table>
           </div>
           <div class="add-comment">
@@ -100,7 +98,7 @@ const fetchCmt = async (id) => {
     const response = await comments.data;
     response.forEach((comment) => {
       countComment.push(comment);
-      list += ` <tr>
+      list += ` <tr class="mt-5">
                     <td class="cmt-date">${comment.creation_date}</td>
                     <td class="cmt-name">${comment.username}</td>
                     <td class="cmt-body"><i>${comment.comment}</i></td>
