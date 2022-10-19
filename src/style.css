@@ -90,12 +90,13 @@ ul {
   flex-direction: column;
   padding-top: 100px;
   color: var(--color4);
-  background: linear-gradient(
-    180deg,
-    black 0%,
-    rgba(0, 0, 0, 0.85) 50%,
-    transparent 100%
-  );
+  background:
+    linear-gradient(
+      180deg,
+      black 0%,
+      rgba(0, 0, 0, 0.85) 50%,
+      transparent 100%
+    );
 }
 
 #intro > div {
@@ -150,12 +151,13 @@ section {
   min-height: 50px;
   line-height: 50px;
   color: white;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8519608527004552) 59%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8519608527004552) 59%,
+      rgba(255, 255, 255, 0) 100%
+    );
   width: 100%;
   text-align: center;
 }
