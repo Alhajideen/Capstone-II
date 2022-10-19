@@ -7,6 +7,7 @@ const postLike = async (ID) => {
       item_id: ID,
     },
   );
+  
   return result;
 };
 

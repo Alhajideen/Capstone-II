@@ -100,7 +100,7 @@ ul {
 }
 
 #intro > div {
-  height: 50vh;
+  height: 10vh;
 }
 
 footer {
@@ -376,10 +376,13 @@ section {
   border: 1px solid grey;
   border-radius: 5px;
   padding: 10px;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 }
 
-.containers .movie-details .comment-lists tr {
-  width: 100%;
+.containers .movie-details .comment-lists table tbody {
+  align-content: space-between;
+  gap: 10px;
   margin: 10px;
 }
 

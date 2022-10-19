@@ -1,4 +1,4 @@
-import showPop from './commentpop';
+import { showPop } from './commentpop';
 
 const { default: axios } = require('axios');
 
@@ -11,7 +11,7 @@ export default class Requests {
           item_id: id,
           username: name,
           comment,
-        },
+        }
       );
       Requests.getComment(id);
     } catch (err) {

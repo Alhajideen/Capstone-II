@@ -1,6 +1,9 @@
 const likeElement = (id) => {
   let likedIDs = [];
   const likeElement = document.querySelector(`.like[id="${id}"] > i`);
+  const counterElement = document.querySelector(`.like[id="${id}"] > span`);
+  let counterValue = parseInt(counterElement.innerHTML) + 1;
+  counterElement.innerHTML = `${counterValue}`;
   likeElement.classList.remove('fa-regular');
   likeElement.classList.add('fa-solid');
   likeElement.classList.add('liked');
@@ -9,8 +12,8 @@ const likeElement = (id) => {
   }
   if (!likedIDs.includes(id)) {
     likedIDs.push(id);
+    localStorage.setItem('likedIDs', JSON.stringify(likedIDs));
   }
-  localStorage.setItem('likedIDs', JSON.stringify(likedIDs));
 };
 
 export default likeElement;
