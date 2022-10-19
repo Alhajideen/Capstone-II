@@ -90,17 +90,16 @@ ul {
   flex-direction: column;
   padding-top: 100px;
   color: var(--color4);
-  background:
-    linear-gradient(
-      180deg,
-      black 0%,
-      rgba(0, 0, 0, 0.85) 50%,
-      transparent 100%
-    );
+  background: linear-gradient(
+    180deg,
+    black 0%,
+    rgba(0, 0, 0, 0.85) 50%,
+    transparent 100%
+  );
 }
 
 #intro > div {
-  height: 50vh;
+  height: 10vh;
 }
 
 footer {
@@ -151,13 +150,12 @@ section {
   min-height: 50px;
   line-height: 50px;
   color: white;
-  background:
-    linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.8519608527004552) 59%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8519608527004552) 59%,
+    rgba(255, 255, 255, 0) 100%
+  );
   width: 100%;
   text-align: center;
 }
@@ -376,10 +374,13 @@ section {
   border: 1px solid grey;
   border-radius: 5px;
   padding: 10px;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 }
 
-.containers .movie-details .comment-lists tr {
-  width: 100%;
+.containers .movie-details .comment-lists table tbody {
+  align-content: space-between;
+  gap: 10px;
   margin: 10px;
 }
 
